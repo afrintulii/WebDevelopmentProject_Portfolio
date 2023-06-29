@@ -8,7 +8,7 @@
                     <div class="row justify-content-center">
                         <div class="col-xl-6 col-lg-8 col-md-10">
                             <div class="breadcrumb__wrap__content">
-                                <h2 class="title">Single Article</h2>
+                                <h2 class="title">{{$blogs->blog_title}}</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
                                         <li class="breadcrumb-item"><a href="index.html">Home</a></li>
@@ -50,28 +50,14 @@
                                     </ul>
                                     <h2 class="title">{{$blogs->blog_title}}</h2>
                                     <p>{!!$blogs->blog_description!!}</p>
-                                    <div class="services__details__img">
-                                        <div class="row">
-                                            <div class="col-sm-6">
-                                                <img src="assets/img/blog/blog_details_img01.jpg" alt="">
-                                            </div>
-                                            <div class="col-sm-6">
-                                                <img src="assets/img/blog/blog_details_img02.jpg" alt="">
-                                            </div>
-                                        </div>
-                                    </div>
-                                    <h2 class="small-title">Nature of Business Strategy</h2>
-                                    <p>A business strategy is a combination of proactive actions on the part of management, for the purpose of enhancing the company’s market position and overall performance and reactions to unexpected developments and new market.</p>
-                                    <p>The maximum part of the company’s present strategy is a result of formerly initiated actions and business approaches, but when market conditions take an unanticipated turn, the company requires a strategic reaction to cope with contingencies. Hence, for unforeseen development, a part of the business strategy is formulated as a reasoned response nature of business strategy.</p>
+                                   
                                 </div>
                                 <div class="blog__details__bottom">
                                     <ul class="blog__details__tag">
                                         <li class="title">Tag:</li>
                                         <li class="tags-list">
-                                            <a href="#">Business</a>
-                                            <a href="#">Design</a>
-                                            <a href="#">apps</a>
-                                            <a href="#">data</a>
+                                            <a href="#">{{$blogs->blog_tags}}</a>
+                                           
                                         </li>
                                     </ul>
                                     <ul class="blog__details__social">
@@ -228,7 +214,7 @@
                         <a href="blog-details.html"><img src="{{asset($all->blog_image)}}" alt=""></a>
                     </div>
                     <div class="rc__post__content">
-                        <h5 class="title"><a href="blog-details.html">{{$all->blog_title}}
+                        <h5 class="title"><a href="{{route('blog.details',$all->id)}}">{{$all->blog_title}}
                         </a></h5>
                         <span class="post-date"><i class="fal fa-calendar-alt"></i> 
                          {{Carbon\Carbon::parse($all->created_at)->diffForHumans()}}</span>

@@ -8,6 +8,8 @@ use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
+use App\Http\Controllers\Home\FooterController;
+use App\Http\Controllers\Home\ContactController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -95,8 +97,25 @@ Route::controller(BlogController::class)->group(function(){
     Route::get('/delete/blog/{id}','DeleteBlog') ->name('delete.blog');
     Route::get('/blog/details/{id}','BlogDetails') ->name('blog.details');
     Route::get('/category/blog/{id}','CategoryBlog') ->name('category.blog');
+    Route::get('/blog','HomeBlog') ->name('home.blog');
    
  });
+
+
+ //Footer Controller All Route
+Route::controller(FooterController::class)->group(function(){
+   
+    Route::get('/footer/setup','FooterSetup') ->name('footer.setup');
+    Route::post('/update/footer/{id}','UpdateFooter') ->name('update.footer');
+   
+ });
+
+//Contact All Route
+ Route::group(['prefix' => 'contact'], function () {
+    Route::get('/me', [ContactController::class, 'Contact'])->name('contact.me');
+    Route::post('/store/message', [ContactController::class, 'StoreMessage'])->name('store.message');
+});
+
 
 
 

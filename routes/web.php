@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\Home\HomeSliderController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Home\HomeController;
 use App\Http\Controllers\Home\AboutController;
 use App\Http\Controllers\Home\PortfolioController;
 use App\Http\Controllers\Home\BlogCategoryController;
@@ -21,10 +22,20 @@ use App\Http\Controllers\Home\ContactController;
 |
 */
 
-Route::get('/', function () {
-    return view('frontend.index');
-});
+// Route::get('/', function () {
+//     return view('frontend.index');
+// });
+//Home Main
+Route::controller(HomeController::class)->group(function(){
+   
+    Route::get('/','HomeMain') ->name('home');
+   
+   
+ });
+
+
 //Admin All Route
+Route::middleware(['auth'])->group(function(){
 Route::controller(AdminController::class)->group(function(){
    Route::get('/admin/logout','destroy') ->name('admin.logout');
    Route::get('/admin/profile','Profile') ->name('admin.profile');
@@ -32,6 +43,7 @@ Route::controller(AdminController::class)->group(function(){
    Route::post('/store/profile','StoreProfile') ->name('store.profile');
    Route::get('/change/password','ChangePassword') ->name('change.password');
    Route::post('/update/password','UpdatePassword') ->name('update.password');
+});
 });
 
 //Home Slide
@@ -68,7 +80,8 @@ Route::controller(PortfolioController::class)->group(function(){
     Route::post('/update/portfolio','UpdatePortfolio') ->name('update.portfolio');
     Route::get('/delete/portfolio{id}','DeletePortfolio') ->name('delete.portfolio');
     Route::get('/portfolio/details{id}','PortfolioDetails') ->name('portfolio.details');
- });
+    Route::get('/portfolio','HomePortfolio') ->name('home.portfolio');
+});
 
 
    //BlogCategory Controller
@@ -110,11 +123,17 @@ Route::controller(FooterController::class)->group(function(){
    
  });
 
-//Contact All Route
- Route::group(['prefix' => 'contact'], function () {
-    Route::get('/me', [ContactController::class, 'Contact'])->name('contact.me');
-    Route::post('/store/message', [ContactController::class, 'StoreMessage'])->name('store.message');
-});
+
+
+Route::controller(ContactController::class)->group(function(){
+   
+    Route::get('/contact','Contact') ->name('contact.me');
+    Route::post('/store/message','StoreMessage') ->name('store.message');
+    Route::get('/contact/message','ContactMessage') ->name('contact.message');
+    Route::get('/delete/message/{id}','DeleteMessage') ->name('delete.message');
+
+ });
+
 
 
 

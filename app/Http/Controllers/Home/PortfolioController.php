@@ -102,7 +102,7 @@ class PortfolioController extends Controller
                 
              ]);
              $notification = array(
-               'message' => 'POrtfolio Updated without Image  Successfully',
+               'message' => 'Portfolio Updated without Image  Successfully',
                'alert-type' => 'success'
        );
            
@@ -113,11 +113,11 @@ class PortfolioController extends Controller
 
 
     public function DeletePortfolio($id){
-        $portfolio = POrtfolio::findOrFail($id);
+        $portfolio = Portfolio::findOrFail($id);
         $img= $portfolio->portfolio_image;
         unlink($img);
     
-        POrtfolio::findOrFail($id)->delete();
+        Portfolio::findOrFail($id)->delete();
         $notification = array(
             'message' => 'Portfolio Deleted Successfully',
             'alert-type' => 'success'

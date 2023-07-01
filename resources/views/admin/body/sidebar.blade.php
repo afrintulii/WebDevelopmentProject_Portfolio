@@ -45,6 +45,18 @@
             <li>
                 <a href="javascript: void(0);" class="has-arrow waves-effect">
                     <i class="ri-mail-send-line"></i>
+                    <span>Services Page Setup</span>
+                </a>
+                <ul class="sub-menu" aria-expanded="false">
+                    <li><a href="{{route('all.services')}}">All Services</a></li>
+                    <li><a href="{{route('add.services')}}">Add Services</a></li>
+                    
+             
+             </ul>
+            </li>
+            <li>
+                <a href="javascript: void(0);" class="has-arrow waves-effect">
+                    <i class="ri-mail-send-line"></i>
                     <span>Portfolio Page Setup</span>
                 </a>
                 <ul class="sub-menu" aria-expanded="false">

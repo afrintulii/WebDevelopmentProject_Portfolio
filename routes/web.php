@@ -11,6 +11,7 @@ use App\Http\Controllers\Home\BlogCategoryController;
 use App\Http\Controllers\Home\BlogController;
 use App\Http\Controllers\Home\FooterController;
 use App\Http\Controllers\Home\ContactController;
+use App\Http\Controllers\Home\ServicesController;
 /*
 |--------------------------------------------------------------------------
 | Web Routes
@@ -69,6 +70,18 @@ Route::controller(AboutController::class)->group(function(){
 
 
 });
+//Services Controller All Route
+Route::controller(ServicesController::class)->group(function(){
+   
+    Route::get('/all/services','AllServices') ->name('all.services');
+    Route::get('/add/services','AddServices') ->name('add.services');
+    Route::post('/store/services','StoreServices') ->name('store.services');
+    Route::get('/edit/services/{id}','EditServices') ->name('edit.services');
+    Route::post('/update/services','UpdateServices') ->name('update.services');
+    Route::get('/delete/services{id}','DeleteServices') ->name('delete.services');
+    Route::get('/services/details{id}','ServicesDetails') ->name('services.details');
+    Route::get('/services','HomeServices') ->name('home.services');
+ });
 
 //POrtfolio
 Route::controller(PortfolioController::class)->group(function(){

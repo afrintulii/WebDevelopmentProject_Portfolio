@@ -25,16 +25,42 @@ $route = Route::current() ->getName();
     <li class="{{($route=='home.portfolio') ? 'active' : ''}}"><a href="{{route('home.portfolio')}}">Portfolio</a>
        
     </li>
-    <li class="{{($route=='home.blog') ? 'active' : ''}}"><a href="{{route('home.blog')}}">Our Blog</a>
+    <li class="{{($route=='home.blog') ? 'active' : ''}}"><a href="{{route('home.blog')}}">My Blog</a>
         
     </li>
     <li class="{{($route=='contact.me') ? 'active' : ''}}"><a href="{{route('contact.me')}}">contact me</a></li>
 </ul>
 </div>
 <div class="header__btn d-none d-md-block">
+<style>
+  .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    text-decoration: none;
+    transition: background-color 0.3s;
+  }
 
+  .btn-login {
+    background-color: #4CAF50; /* Green color */
+    color: #fff;
+  }
 
-<a href="{{route('contact.me')}}" class="btn">Contact me</a>
+  .btn-register {
+    background-color: #007BFF; /* Blue color */
+    color: #fff;
+  }
+
+  .btn:hover {
+    opacity: 0.8;
+  }
+</style>
+
+<a href="{{route('login')}}" class="btn btn-login">Login</a>
+<a href="{{route('register')}}" class="btn btn-register">Register</a>
+
 </div>
 </nav>
 </div>

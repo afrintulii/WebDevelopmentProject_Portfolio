@@ -63,7 +63,7 @@ About | Personal Portfolio Website
                 </div>
             </div>
         </div>
-        <div class="row">
+        <!-- <div class="row">
             <div class="col-12">
                 <div class="about__info__wrap">
                     <ul class="nav nav-tabs" id="myTab" role="tablist">
@@ -192,7 +192,7 @@ About | Personal Portfolio Website
                                             </div>
                                             <div class="award__content">
                                                 <h5 class="title">User research award 2020</h5>
-                                                <p>There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour,</p>
+                                                <p>, by injected humour,</p>
                                             </div>
                                         </div>
                                     </div>
@@ -249,13 +249,13 @@ About | Personal Portfolio Website
                     </div>
                 </div>
             </div>
-        </div>
+        </div>-->
     </div>
 </section>
 <!-- about-area-end -->
 
 <!-- services-area -->
-<section class="services__style__two">
+<!-- <section class="services__style__two">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-lg-6 col-md-8">
@@ -366,11 +366,11 @@ About | Personal Portfolio Website
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- services-area-end -->
 
 <!-- testimonial-area -->
-<section class="testimonial testimonial__style__two">
+<!-- <section class="testimonial testimonial__style__two">
     <div class="container">
         <div class="row justify-content-center">
             <div class="col-xl-9 col-lg-11">
@@ -424,11 +424,11 @@ About | Personal Portfolio Website
             <li><img src="assets/img/icons/testi_shape06.png" alt=""></li>
         </ul>
     </div>
-</section>
+</section> -->
 <!-- testimonial-area-end -->
 
 <!-- blog-area -->
-<section class="blog blog__style__two">
+<!-- <section class="blog blog__style__two">
     <div class="container">
         <div class="row gx-0 justify-content-center">
             <div class="col-lg-4 col-md-6 col-sm-9">
@@ -481,10 +481,10 @@ About | Personal Portfolio Website
             <a href="blog.html" class="btn">more blog</a>
         </div>
     </div>
-</section>
+</section> -->
 <!-- blog-area-end -->
 
-<!-- contact-area -->
+<!-- contact-area 
 <section class="homeContact">
     <div class="container">
         <div class="homeContact__wrap">
@@ -514,7 +514,7 @@ About | Personal Portfolio Website
         </div>
     </div>
 </section>
-<!-- contact-area-end -->
+contact-area-end -->
 
         </main>
 @endsection

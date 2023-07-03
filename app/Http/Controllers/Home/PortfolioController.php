@@ -7,6 +7,7 @@ use Illuminate\Http\Request;
 use App\Models\Portfolio;
 use Intervention\Image\Facades\Image;
 use Illuminate\Support\Carbon;
+use App\Models\Message;
 
 
 class PortfolioController extends Controller
@@ -139,6 +140,28 @@ class PortfolioController extends Controller
         $portfolio = Portfolio::latest()->get();
         return view('frontend.portfolio',compact('portfolio'));
     } //End Method
+// get in touch
+
+public function storeMessage(Request $request)
+{
+    $request->validate([
+        'name' => 'required',
+        'email' => 'required|email',
+        'message' => 'required',
+    ]);
+    //dd($validator); // Print the validator object
+
+    Message::insert([
+        'name' => $request->name,
+        'email' => $request->email,
+        'message' => $request->message,
+    ]);
+
+    // Optionally, you can redirect back or return a response
+    return redirect()->back()->with('success', 'Message sent successfully!');
+}
+//end of get in touch
+
 
 
 

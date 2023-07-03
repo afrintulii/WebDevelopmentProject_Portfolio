@@ -31,6 +31,7 @@
             <!-- services-details-area -->
             <section class="services__details">
                 <div class="container">
+                   
                     <div class="row">
                         <div class="col-lg-8">
                             <div class="services__details__thumb">
@@ -56,12 +57,13 @@
                             <aside class="services__sidebar">
                                 <div class="widget">
                                     <h5 class="title">Get in Touch</h5>
-                                    <form action="#" class="sidebar__contact">
-                                        <input type="text" placeholder="Enter name*">
-                                        <input type="email" placeholder="Enter your mail*">
-                                        <textarea name="message" id="message" placeholder="Massage*"></textarea>
-                                        <button type="submit" class="btn">send massage</button>
-                                    </form>
+                                    <form action="{{ route('message.store') }}" class="sidebar__contact" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="Enter name*">
+    <input type="email" name="email" placeholder="Enter your mail*">
+    <textarea name="message" id="message" placeholder="Massage*"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+</form>
                                 </div>
                                 <div class="widget">
                                     <h5 class="title">Contact Information</h5>
@@ -89,7 +91,7 @@
 
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
+            <!-- <section class="homeContact homeContact__style__two">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -117,7 +119,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- contact-area-end -->
 
         </main>

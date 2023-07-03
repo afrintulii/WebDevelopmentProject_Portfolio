@@ -26,7 +26,7 @@ $allfooter=App\Models\Footer::find(1);
                             </div>
                             <div class="footer__widget__address">
                                 <p>{{$allfooter->address}}</p>
-                                <a href="mailto:noreply@envato.com" class="mail">{{$allfooter->email}}/a>
+                                <a href="mailto:noreply@envato.com" class="mail">{{$allfooter->email}}
                             </div>
                         </div>
                     </div>

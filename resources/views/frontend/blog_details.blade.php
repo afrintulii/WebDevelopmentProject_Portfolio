@@ -11,7 +11,7 @@
                                 <h2 class="title">{{$blogs->blog_title}}</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
                                     </ol>
                                 </nav>
@@ -21,12 +21,12 @@
                 </div>
                 <div class="breadcrumb__wrap__icon">
                     <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
+                    <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon04.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon05.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon06.png')}}" alt=""></li>
                     </ul>
                 </div>
             </section>
@@ -63,14 +63,15 @@
                                     <ul class="blog__details__social">
                                         <li class="title">Share :</li>
                                         <li class="social-icons">
-                                            <a href="#"><i class="fab fa-facebook"></i></a>
-                                            <a href="#"><i class="fab fa-twitter-square"></i></a>
-                                            <a href="#"><i class="fab fa-linkedin"></i></a>
-                                            <a href="#"><i class="fab fa-pinterest"></i></a>
-                                        </li>
+                                    <a href="https://www.facebook.com/"><i class="fab fa-facebook"></i></a>
+                                     <a href="https://twitter.com/i/flow/login?redirect_after_login=%2F"><i class="fab fa-twitter"></i></a>
+                                     <a href="https://www.linkedin.com/"><i class="fab fa-linkedin"></i></a>
+                                    <a href="https://www.instagram.com/"><i class="fab fa-instragram"></i></a>
+                                     </li>
+
                                     </ul>
                                 </div>
-                                <div class="blog__next__prev">
+                                <!-- <div class="blog__next__prev">
                                     <div class="row justify-content-between">
                                         <div class="col-xl-5 col-md-6">
                                             <div class="blog__next__prev__item">
@@ -100,8 +101,8 @@
                                             </div>
                                         </div>
                                     </div>
-                                </div>
-                                <div class="comment comment__wrap">
+                                </div> -->
+                                <!-- <div class="comment comment__wrap">
                                     <div class="comment__title">
                                         <h4 class="title">(04) Comment</h4>
                                     </div>
@@ -167,8 +168,8 @@
                                             </div>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="comment__form">
+                                </div> -->
+                                <!-- <div class="comment__form">
                                     <div class="comment__title">
                                         <h4 class="title">Write your comment</h4>
                                     </div>
@@ -194,7 +195,7 @@
                                         </div>
                                         <button type="submit" class="btn">post a comment</button>
                                     </form>
-                                </div>
+                                </div> -->
                             </div>
                         </div>
     <div class="col-lg-4">
@@ -217,14 +218,19 @@
                         <h5 class="title"><a href="{{route('blog.details',$all->id)}}">{{$all->blog_title}}
                         </a></h5>
                         <span class="post-date"><i class="fal fa-calendar-alt"></i> 
-                         {{Carbon\Carbon::parse($all->created_at)->diffForHumans()}}</span>
+                         {{Carbon\Carbon::parse($all->created_at)->diffForHumans()}}
+                         
+                                </span>
+                        
                     </div>
                 </li>
+                
 
                @endforeach 
 
                 
             </ul>
+                 
         </div>
         <div class="widget">
             <h4 class="widget-title">Categories</h4>
@@ -238,7 +244,7 @@
                 @endforeach
             </ul>
         </div>
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Recent Comment</h4>
                                     <ul class="sidebar__comment">
                                         <li class="sidebar__comment__item">
@@ -258,8 +264,8 @@
                                             <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="widget">
+                                </div> -->
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Popular Tags</h4>
                                     <ul class="sidebar__tags">
                                         <li><a href="blog.html">Business</a></li>
@@ -274,7 +280,7 @@
                                         <li><a href="blog.html">landing page</a></li>
                                         <li><a href="blog.html">data</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </aside>
                         </div>
                     </div>
@@ -282,9 +288,53 @@
             </section>
             <!-- blog-details-area-end -->
 
-
+            </div>
+                                <!-- <div class="widget">
+                                    <h4 class="widget-title">Recent Comment</h4>
+                                    <ul class="sidebar__comment">
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                    </ul>
+                                </div> -->
+                                </div>
+                                <!-- <div class="widget">
+                                    <h4 class="widget-title">Recent Comment</h4>
+                                    <ul class="sidebar__comment">
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                        <li class="sidebar__comment__item">
+                                            <a href="blog-details.html">Rasalina Sponde</a>
+                                            <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
+                                        </li>
+                                    </ul>
+                               
+                                </div> -->
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
+            <!-- <section class="homeContact homeContact__style__two">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -312,8 +362,8 @@
                         </div>
                     </div>
                 </div>
-            </section>
-            <!-- contact-area-end -->
+            </section> -->
+            <!-- contact-area-end-->
 
         </main>
 

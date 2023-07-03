@@ -12,7 +12,7 @@
                                 <h2 class="title">{{$categoryname->blog_category}}</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                     </ol>
                                 </nav>
@@ -21,13 +21,14 @@
                     </div>
                 </div>
                 <div class="breadcrumb__wrap__icon">
+                    
                     <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon04.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon05.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon06.png')}}" alt=""></li>
                     </ul>
                 </div>
             </section>
@@ -42,13 +43,13 @@
                           @foreach($blogpost as $item)
     <div class="standard__blog__post">
         <div class="standard__blog__thumb">
-            <a href="blog-details.html"><img src="{{asset($item->blog_image)}}" alt=""></a>
-            <a href="blog-details.html" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
+            <a href="#"><img src="{{asset($item->blog_image)}}" alt=""></a>
+            <a href="#" class="blog__link"><i class="far fa-long-arrow-right"></i></a>
         </div>
         <div class="standard__blog__content">
             <div class="blog__post__avatar">
                 <div class="thumb"><img src="{{asset($item->blog_image)}}" alt=""></div>
-                <span class="post__by">By : <a href="#">Halina Spond</a></span>
+                <span class="post__by">By : <a href="#">Mahmuda Afrin </a></span>
             </div>
             <h2 class="title"><a href="{{route('blog.details',$item->id)}}">{{$item->blog_title}}</a></h2>
             <p>
@@ -57,6 +58,13 @@
                 <li><i class="fal fa-calendar-alt"></i>  {{Carbon\Carbon::parse($item->created_at)->diffForHumans()}}</li>
                 
             </ul>
+            <br>
+            <ul class="blog__post__meta">
+
+                    <!-- <li><i class="fal fa-calendar-alt"></i> 25 january 2021</li>
+                    <li><i class="fal fa-comments-alt"></i> <a href="#">Comment (08)</a></li> -->
+                    
+          </ul>
         </div>
     </div>
                             @endforeach
@@ -83,10 +91,10 @@
                     @foreach($allblogs as $all)
                 <li class="rc__post__item">
                     <div class="rc__post__thumb">
-                        <a href="blog-details.html"><img src="{{asset($all->blog_image)}}" alt=""></a>
+                        <a href="#"><img src="{{asset($all->blog_image)}}" alt=""></a>
                     </div>
                     <div class="rc__post__content">
-                        <h5 class="title"><a href="blog-details.html">{{$all->blog_title}}
+                        <h5 class="title"><a href="{{route('blog.details',$item->id)}}">{{$all->blog_title}}
                         </a></h5>
                         <span class="post-date"><i class="fal fa-calendar-alt"></i> 
                          {{Carbon\Carbon::parse($all->created_at)->diffForHumans()}}</span>
@@ -108,7 +116,7 @@
                 @endforeach
             </ul>
         </div>
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Recent Comment</h4>
                                     <ul class="sidebar__comment">
                                         <li class="sidebar__comment__item">
@@ -128,8 +136,8 @@
                                             <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="widget">
+                                </div> -->
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Popular Tags</h4>
                                     <ul class="sidebar__tags">
                                         <li><a href="blog.html">Business</a></li>
@@ -144,7 +152,7 @@
                                         <li><a href="blog.html">landing page</a></li>
                                         <li><a href="blog.html">data</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </aside>
                         </div>
                     </div>
@@ -154,7 +162,7 @@
 
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
+            <!-- <section class="homeContact homeContact__style__two">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -182,7 +190,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- contact-area-end -->
 
         </main>

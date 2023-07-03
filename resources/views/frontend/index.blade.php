@@ -91,7 +91,7 @@ Home | Personal Portfolio Website
             <!-- portfolio-area-end -->
 
             <!-- partner-area -->
-            <section class="partner">
+            <!-- <section class="partner">
                 <div class="container">
                     <div class="row align-items-center">
                         <div class="col-lg-6">
@@ -134,11 +134,11 @@ Home | Personal Portfolio Website
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- partner-area-end -->
 
             <!-- testimonial-area -->
-            <section class="testimonial">
+            <!-- <section class="testimonial">
                 <div class="container">
                     <div class="row align-items-center justify-content-between">
                         <div class="col-lg-6 order-0 order-lg-2">
@@ -187,7 +187,7 @@ Home | Personal Portfolio Website
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- testimonial-area-end -->
 
             <!-- blog-area -->
@@ -195,7 +195,7 @@ Home | Personal Portfolio Website
             <!-- blog-area-end -->
 
             <!-- contact-area -->
-            <section class="homeContact">
+            <!-- <section class="homeContact">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -223,6 +223,6 @@ Home | Personal Portfolio Website
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             @endsection
             <!-- contact-area-end -->

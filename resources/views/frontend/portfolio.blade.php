@@ -16,7 +16,7 @@ Portfolio | Personal Portfolio Website
                                 <h2 class="title">Portfolio Page</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Portfolio</li>
                                     </ol>
                                 </nav>
@@ -26,12 +26,12 @@ Portfolio | Personal Portfolio Website
                 </div>
                 <div class="breadcrumb__wrap__icon">
                     <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
+                    <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon04.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon05.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon06.png')}}" alt=""></li>
                     </ul>
                 </div>
             </section>
@@ -75,7 +75,7 @@ Portfolio | Personal Portfolio Website
 
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
+            <!-- <section class="homeContact homeContact__style__two">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -103,7 +103,7 @@ Portfolio | Personal Portfolio Website
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- contact-area-end -->
 
         </main>

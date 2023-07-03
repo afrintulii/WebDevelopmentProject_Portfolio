@@ -16,7 +16,7 @@ Blog | Personal Portfolio Website
                                 <h2 class="title">All Blogs</h2>
                                 <nav aria-label="breadcrumb">
                                     <ol class="breadcrumb">
-                                        <li class="breadcrumb-item"><a href="index.html">Home</a></li>
+                                        <li class="breadcrumb-item"><a href="{{route('home')}}">Home</a></li>
                                         <li class="breadcrumb-item active" aria-current="page">Blog</li>
                                     </ol>
                                 </nav>
@@ -26,12 +26,12 @@ Blog | Personal Portfolio Website
                 </div>
                 <div class="breadcrumb__wrap__icon">
                     <ul>
-                        <li><img src="assets/img/icons/breadcrumb_icon01.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon02.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon03.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon04.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon05.png" alt=""></li>
-                        <li><img src="assets/img/icons/breadcrumb_icon06.png" alt=""></li>
+                    <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon01.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon02.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon03.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon04.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon05.png')}}" alt=""></li>
+                        <li><img src="{{asset('frontend/assets/img/icons/breadcrumb_icon06.png')}}" alt=""></li>
                     </ul>
                 </div>
             </section>
@@ -52,7 +52,7 @@ Blog | Personal Portfolio Website
         <div class="standard__blog__content">
             <div class="blog__post__avatar">
                 <div class="thumb"><img src="{{asset($item->blog_image)}}" alt=""></div>
-                <span class="post__by">By : <a href="#">Halina Spond</a></span>
+                <span class="post__by">By : <a href="#">Mahmuda Afrin</a></span>
             </div>
             <h2 class="title"><a href="{{route('blog.details',$item->id)}}">{{$item->blog_title}}</a></h2>
             <p>
@@ -85,7 +85,7 @@ Blog | Personal Portfolio Website
                         <a href="blog-details.html"><img src="{{asset($all->blog_image)}}" alt=""></a>
                     </div>
                     <div class="rc__post__content">
-                        <h5 class="title"><a href="blog-details.html">{{$all->blog_title}}
+                        <h5 class="title"><a href="{{route('blog.details',$item->id)}}">{{$all->blog_title}}
                         </a></h5>
                         <span class="post-date"><i class="fal fa-calendar-alt"></i> 
                          {{Carbon\Carbon::parse($all->created_at)->diffForHumans()}}</span>
@@ -107,7 +107,7 @@ Blog | Personal Portfolio Website
                 @endforeach
             </ul>
         </div>
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Recent Comment</h4>
                                     <ul class="sidebar__comment">
                                         <li class="sidebar__comment__item">
@@ -127,8 +127,8 @@ Blog | Personal Portfolio Website
                                             <p>There are many variations of passages of lorem ipsum available, but the majority have</p>
                                         </li>
                                     </ul>
-                                </div>
-                                <div class="widget">
+                                </div> -->
+                                <!-- <div class="widget">
                                     <h4 class="widget-title">Popular Tags</h4>
                                     <ul class="sidebar__tags">
                                         <li><a href="blog.html">Business</a></li>
@@ -143,7 +143,7 @@ Blog | Personal Portfolio Website
                                         <li><a href="blog.html">landing page</a></li>
                                         <li><a href="blog.html">data</a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </aside>
                         </div>
                     </div>
@@ -153,7 +153,7 @@ Blog | Personal Portfolio Website
 
 
             <!-- contact-area -->
-            <section class="homeContact homeContact__style__two">
+            <!-- <section class="homeContact homeContact__style__two">
                 <div class="container">
                     <div class="homeContact__wrap">
                         <div class="row">
@@ -181,7 +181,7 @@ Blog | Personal Portfolio Website
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- contact-area-end -->
 
         </main>

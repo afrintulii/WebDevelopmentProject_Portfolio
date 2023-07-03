@@ -54,21 +54,21 @@
                             </div>
                         </div>
                     </div>
-                    <h2 class="small-title">Nature of Business Strategy</h2>
-                    <p>A business strategy is a combination of proactive actions on the part of management, for the purpose of enhancing the company’s market position and overall performance and reactions to unexpected developments and new market.</p>
-                    <p>The maximum part of the company’s present strategy is a result of formerly initiated actions and business approaches, but when market conditions take an unanticipated turn, the company requires a strategic reaction to cope with contingencies. Hence, for unforeseen development, a part of the business strategy is formulated as a reasoned response nature of business strategy.</p>
+                    
                 </div>
             </div>
             <div class="col-lg-4">
                 <aside class="services__sidebar">
                     <div class="widget">
                         <h5 class="title">Get in Touch</h5>
-                        <form action="#" class="sidebar__contact">
-                            <input type="text" placeholder="Enter name*">
-                            <input type="email" placeholder="Enter your mail*">
-                            <textarea name="message" id="message" placeholder="Massage*"></textarea>
-                            <button type="submit" class="btn">send massage</button>
-                        </form>
+                        <form action="{{ route('message.store') }}" class="sidebar__contact" method="POST">
+    @csrf
+    <input type="text" name="name" placeholder="Enter name*">
+    <input type="email" name="email" placeholder="Enter your mail*">
+    <textarea name="message" id="message" placeholder="Massage*"></textarea>
+    <button type="submit" class="btn">Send Message</button>
+</form>
+
                     </div>
                     <div class="widget">
                         <h5 class="title">Project Information</h5>
@@ -91,14 +91,14 @@
                             <li><span>Phone :</span> +7464 0187 3535 645</li>
                             <li><span>Fax id :</span> +9 659459 49594</li>
                         </ul>
-                        <ul class="sidebar__contact__social">
+                        <!-- <ul class="sidebar__contact__social">
                             <li><a href="#"><i class="fab fa-dribbble"></i></a></li>
                             <li><a href="#"><i class="fab fa-behance"></i></a></li>
                             <li><a href="#"><i class="fab fa-linkedin"></i></a></li>
                             <li><a href="#"><i class="fab fa-pinterest"></i></a></li>
                             <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                             <li><a href="#"><i class="fab fa-youtube"></i></a></li>
-                        </ul>
+                        </ul> -->
                     </div>
                 </aside>
             </div>
@@ -109,7 +109,7 @@
 
 
 <!-- contact-area -->
-<section class="homeContact homeContact__style__two">
+<!-- <section class="homeContact homeContact__style__two">
     <div class="container">
         <div class="homeContact__wrap">
             <div class="row">
@@ -137,7 +137,7 @@
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- contact-area-end -->
 
 </main>

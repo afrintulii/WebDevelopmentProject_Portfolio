@@ -117,7 +117,7 @@ Contact | Personal Portfolio Website
 <!-- contact-info-area-end -->
 
 <!-- contact-area -->
-<section class="homeContact homeContact__style__two">
+<!-- <section class="homeContact homeContact__style__two">
     <div class="container">
         <div class="homeContact__wrap">
             <div class="row">
@@ -145,7 +145,7 @@ Contact | Personal Portfolio Website
             </div>
         </div>
     </div>
-</section>
+</section> -->
 <!-- contact-area-end -->
 
 </main>

@@ -200,12 +200,7 @@
                         </div>
     <div class="col-lg-4">
     <aside class="blog__sidebar">
-        <div class="widget">
-            <form action="#" class="search-form">
-                <input type="text" placeholder="Search">
-                <button type="submit"><i class="fal fa-search"></i></button>
-            </form>
-        </div>
+        
         <div class="widget">
             <h4 class="widget-title">Recent Blog</h4>
             <ul class="rc__post">

@@ -26,7 +26,11 @@ use App\Http\Controllers\Home\ServicesController;
 // Route::get('/', function () {
 //     return view('frontend.index');
 // });
+
+
+
 //Home Main
+
 Route::controller(HomeController::class)->group(function(){
    
     Route::get('/','HomeMain') ->name('home');
@@ -36,10 +40,10 @@ Route::controller(HomeController::class)->group(function(){
 
 
 //Admin All Route
-Route::middleware(['auth'])->group(function(){
+Route::middleware(['auth','isAdmin'])->group(function(){
 Route::controller(AdminController::class)->group(function(){
-   Route::get('/admin/logout','destroy') ->name('admin.logout');
-   Route::get('/admin/profile','Profile') ->name('admin.profile');
+   Route::get('admin/logout','destroy') ->name('admin.logout');
+   Route::get('admin/profile','Profile') ->name('admin.profile');
    Route::get('/edit/profile','EditProfile') ->name('edit.profile');
    Route::post('/store/profile','StoreProfile') ->name('store.profile');
    Route::get('/change/password','ChangePassword') ->name('change.password');
@@ -163,3 +167,7 @@ Route::middleware('auth')->group(function () {
 });
 
 require __DIR__.'/auth.php';
+
+Auth::routes();
+
+

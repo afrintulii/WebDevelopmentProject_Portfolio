@@ -58,14 +58,14 @@
                                 <div class="widget">
                                     <h5 class="title">Get in Touch</h5>
                                     <form action="{{ route('message.store') }}" class="sidebar__contact" method="POST">
-    @csrf
-    <input type="text" name="name" placeholder="Enter name*">
-    <input type="email" name="email" placeholder="Enter your mail*">
-    <textarea name="message" id="message" placeholder="Massage*"></textarea>
-    <button type="submit" class="btn">Send Message</button>
-</form>
+                                @csrf
+                               <input type="text" name="name" placeholder="Enter name*">
+                               <input type="email" name="email" placeholder="Enter your mail*">
+                               <textarea name="message" id="message" placeholder="Massage*"></textarea>
+                              <button type="submit" class="btn">Send Message</button>
+                            </form>
                                 </div>
-                                <div class="widget">
+                                <!-- <div class="widget">
                                     <h5 class="title">Contact Information</h5>
                                     <ul class="sidebar__contact__info">
                                         <li><span>Address :</span> 8638 Amarica Stranfod, <br> Mailbon Star</li>
@@ -81,7 +81,7 @@
                                         <li><a href="#"><i class="fab fa-facebook"></i></a></li>
                                         <li><a href="#"><i class="fab fa-youtube"></i></a></li>
                                     </ul>
-                                </div>
+                                </div> -->
                             </aside>
                         </div>
                     </div>

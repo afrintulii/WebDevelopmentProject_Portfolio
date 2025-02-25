@@ -6,7 +6,7 @@ Welcome to my Personal Portfolio Website! This project is built using HTML, CSS,
 🔒 Authentication System
 
 Register
-![Alt Text](assets/your-image-name.png)
+![Alt Text](Asset_Portfolio/register.png)
 
 
 Login

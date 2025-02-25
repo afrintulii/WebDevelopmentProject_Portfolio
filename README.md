@@ -30,10 +30,12 @@ Skills and expertise
 
 🛠️ Services Section
 
-List of professional services I offer
+List of professional services 
+
 ![Services](Asset_Portfolio/services.png)
 
 ![Services1](Asset_Portfolio/services2.png)
+
 ![Services2](Asset_Portfolio/services3.png)
 
 🎨 Portfolio Section
@@ -63,4 +65,4 @@ Easy way for visitors to reach out
 
 Links to my social media profiles
 
-![social-contact](Asset_Portfolio/social_contact.png)
+![social-contact](Asset_Portfolio/social_connect.png)
